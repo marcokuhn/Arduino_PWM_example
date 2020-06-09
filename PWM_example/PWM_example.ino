@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // put your main code here, to run repeatedly yes:
   int poti_value = analogRead(POTI_PIN);
   Serial.println(poti_value);
   int scaled_value = map(poti_value,0, 1023,0, 255);

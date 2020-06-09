@@ -13,4 +13,5 @@ void loop() {
   Serial.println(poti_value);
   int scaled_value = map(poti_value,0, 1023,0, 255);
   analogWrite(LED_PWM_PIN,scaled_value);
-}
+} 
+//Laurens

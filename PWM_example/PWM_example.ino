@@ -1,9 +1,10 @@
 const int POTI_PIN = A0;
 const int LED_PWM_PIN = 9;
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  pinMode(9, OUTPUT);
+  pinMode(LED_PWM_PIN, OUTPUT);
 }
 
 void loop() {
@@ -11,5 +12,5 @@ void loop() {
   int poti_value = analogRead(POTI_PIN);
   Serial.println(poti_value);
   int scaled_value = map(poti_value,0, 1023,0, 255);
-  analogWrite(9,scaled_value);
+  analogWrite(LED_PWM_PIN,scaled_value);
 }
